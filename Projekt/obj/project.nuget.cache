@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T/ASmD9Wo4JkpJcz4LIlcN5UaW2YlYdmrcUPyS1cTsP4pKEHPjYj5MuP4JKzm4aWrJpK9gt+7/85noEchcnqxA==",
+  "dgSpecHash": "mGLsjZWzTlyLYe5anYSNaXUbuQW0gWu5p5zluOwuxqZTBq78FRmC4llH5LNw4Z23/9tt3KBk8Z4nisPxBVhQbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\morkn\\Source\\Repos\\Samiieh\\OOP-projektarbete\\Projekt\\Projekt.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\morkn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\valli\\Documents\\GitHub\\OOP-projektarbete\\Projekt\\Projekt.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

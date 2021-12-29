@@ -14,3 +14,19 @@ C:\Users\valli\OneDrive\Skrivbord\Skola\År1 GIK299 - Objektorienterad programme
 C:\Users\valli\OneDrive\Skrivbord\Skola\År1 GIK299 - Objektorienterad programmering\Projekt\obj\Debug\net5.0\ref\Projekt.dll
 C:\Users\valli\OneDrive\Skrivbord\Skola\År1 GIK299 - Objektorienterad programmering\Projekt\obj\Debug\net5.0\Projekt.pdb
 C:\Users\valli\OneDrive\Skrivbord\Skola\År1 GIK299 - Objektorienterad programmering\Projekt\obj\Debug\net5.0\Projekt.genruntimeconfig.cache
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\obj\Debug\net5.0\Projekt.csproj.AssemblyReference.cache
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\obj\Debug\net5.0\Projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\obj\Debug\net5.0\Projekt.AssemblyInfoInputs.cache
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\obj\Debug\net5.0\Projekt.AssemblyInfo.cs
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\obj\Debug\net5.0\Projekt.csproj.CoreCompileInputs.cache
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\obj\Debug\net5.0\Projekt.dll
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\obj\Debug\net5.0\ref\Projekt.dll
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\obj\Debug\net5.0\Projekt.pdb
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\bin\Debug\net5.0\Projekt.exe
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\bin\Debug\net5.0\Projekt.deps.json
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\bin\Debug\net5.0\Projekt.runtimeconfig.json
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\bin\Debug\net5.0\Projekt.runtimeconfig.dev.json
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\bin\Debug\net5.0\Projekt.dll
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\bin\Debug\net5.0\ref\Projekt.dll
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\bin\Debug\net5.0\Projekt.pdb
+C:\Users\valli\Documents\GitHub\OOP-projektarbete\Projekt\obj\Debug\net5.0\Projekt.genruntimeconfig.cache

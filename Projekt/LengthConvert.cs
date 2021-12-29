@@ -9,7 +9,7 @@ namespace Projekt
     public class LengthConvert
     {
 
-        // Cm = 1
+        // Cm = 1 = sam's penis
         // Inch = 0.393701
         // Foot = 0.0328084
         // Yard = 0.0109361

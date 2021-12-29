@@ -4,49 +4,55 @@ namespace Projekt
 {
     internal class Program
     {
-        public void Main()
+        public static void Main()
         {
-            bool showMenu = true;
-
-            while (showMenu)
+            do
             {
-                MainMenu Menu = new MainMenu();
-                Menu.Meny();     // anropar Meny
-               
-                //showMenu = MainMenu.Meny();  
-            }
+                MainMenu Menu = new MainMenu();             // skapar en instans av klassen MainMenu
+                Menu.Meny();                                // anropar Meny ifrån klassen
+              
 
-        }
-     }
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        Ohmslaw ohms = new Ohmslaw();       // Creates an instance of Ohms class
+                        ohms.OhmsMenu();                    // Calls Ohms menu from ohms class
+                        Console.ReadLine();
+                        break;
+                    case "2":
+                        Console.WriteLine("You picked two!");
+                        Console.ReadLine();
+                        break;
+                    case "3":
+                        Console.WriteLine("You picked three!");
+                        Console.ReadLine();
+                        break;
+                    case "4":
+                        Console.WriteLine("You picked four");
+                        Console.ReadLine();
+                        break;
+                    case "5":
+                    case "breKK":
+                        Console.WriteLine("Thank you for using our program, have a great day.");
+                        Environment.Exit(0);
+                        Console.ReadLine();
+                        break;
+                    default:
+                        Console.WriteLine("Its stored in the \"HEAP!\" - Baklauv Chau -2021 ");
+                        Console.ReadLine();
+                        break;        
+                }
+            } 
+            while (true) ;
+       }
+
+       
+    }
 }
 
 
 
-//switch (Console.ReadLine())
-//{
-//    case "1":
-//        Console.WriteLine("1");
-//        break;
-//    case "2":
-//        Console.WriteLine("2");
-//        break;
-//    case "3":
-//        Console.WriteLine("3");
-//        break;
-//    case "4":
-//        Console.WriteLine("4");
-//        break;
-//    case "5":
-//        Console.WriteLine("5");
-//        break;
-//    default:
-//        Console.WriteLine("Wrong input try again!");
-//        Console.ReadLine();
-//        break;
-//}
-
-
-
+        // NOTES //
 
 // Klasser
 // MainMenu     Ohmslaw      LengthConvert   SDTCalc   AreaVolume

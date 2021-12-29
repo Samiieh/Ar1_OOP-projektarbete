@@ -8,27 +8,26 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\morkn\\.nuget\\packages\\": {}
+    "C:\\Users\\valli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\morkn\\Source\\Repos\\Samiieh\\OOP-projektarbete\\Projekt\\Projekt.csproj",
+      "projectUniqueName": "C:\\Users\\valli\\Documents\\GitHub\\OOP-projektarbete\\Projekt\\Projekt.csproj",
       "projectName": "Projekt",
-      "projectPath": "C:\\Users\\morkn\\Source\\Repos\\Samiieh\\OOP-projektarbete\\Projekt\\Projekt.csproj",
-      "packagesPath": "C:\\Users\\morkn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\morkn\\Source\\Repos\\Samiieh\\OOP-projektarbete\\Projekt\\obj\\",
+      "projectPath": "C:\\Users\\valli\\Documents\\GitHub\\OOP-projektarbete\\Projekt\\Projekt.csproj",
+      "packagesPath": "C:\\Users\\valli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\valli\\Documents\\GitHub\\OOP-projektarbete\\Projekt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\morkn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\valli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
       },
       "frameworks": {
         "net5.0": {
@@ -55,12 +54,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
