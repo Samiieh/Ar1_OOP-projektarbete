@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+QdexVLKrHSbVCwgIaiq7Ht6NKZrRFadqKg7vzNx6JAe7F9jXqqe5idpdo4tm8g/nHFRPm1nrSwwNmmOFH3x/g==",
+  "dgSpecHash": "T/ASmD9Wo4JkpJcz4LIlcN5UaW2YlYdmrcUPyS1cTsP4pKEHPjYj5MuP4JKzm4aWrJpK9gt+7/85noEchcnqxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\valli\\OneDrive\\Skrivbord\\Skola\\År1 GIK299 - Objektorienterad programmering\\Projekt\\Projekt.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\morkn\\Source\\Repos\\Samiieh\\OOP-projektarbete\\Projekt\\Projekt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\morkn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
   "logs": []
 }
