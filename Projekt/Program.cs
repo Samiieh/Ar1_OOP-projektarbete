@@ -25,7 +25,8 @@ namespace Projekt
                         Console.ReadLine();
                         break;
                     case "3":
-                        Console.WriteLine("You picked three!");
+                        SDTCalc stdc = new SDTCalc();
+                        stdc.SDTCalcMenu();
                         Console.ReadLine();
                         break;
                     case "4":

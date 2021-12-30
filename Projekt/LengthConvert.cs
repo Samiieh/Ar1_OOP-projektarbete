@@ -16,6 +16,7 @@ namespace Projekt
 
             do
             {
+                Console.Clear();
                 Console.WriteLine("Which unit do you want to convert?");
                 Console.WriteLine();
                 Console.WriteLine("1. Cm");
@@ -27,14 +28,16 @@ namespace Projekt
                 Console.WriteLine();
                 Console.WriteLine("Pick a unit from the menu: ");
                 string menuSelect = Console.ReadLine();
+                Console.WriteLine();
 
                 switch (menuSelect)
                 {
                     case "1":
                         Console.WriteLine("CM to other conversion.");
                         Console.WriteLine();
-                        Console.WriteLine("How many cm do you want to convert? ");
+                        Console.Write("How many cm do you want to convert?: ");
                         cmString = Console.ReadLine();
+                        Console.WriteLine();
                         while (!double.TryParse(cmString, out cm))
                         {
                             Console.WriteLine("Wrong input. Please enter cm in numbers.");
@@ -50,14 +53,16 @@ namespace Projekt
                         Console.WriteLine($"{cm} cm = {foot} foot");
                         Console.WriteLine($"{cm} cm = {yard} yards");
                         Console.WriteLine($"{cm} cm = {meter} meters");
+                        Console.WriteLine();
                         Console.ReadLine();
                         break;
 
                     case "2":
                         Console.WriteLine("INCH to other conversion.");
                         Console.WriteLine();
-                        Console.WriteLine("How many inches do you want to convert? ");
+                        Console.Write("How many inches do you want to convert? ");
                         inchString = Console.ReadLine();
+                        Console.WriteLine();
                         while (!double.TryParse(inchString, out inch))
                         {
                             Console.WriteLine("Wrong input. Please enter inches in numbers.");
@@ -73,14 +78,16 @@ namespace Projekt
                         Console.WriteLine($"{inch} inches = {foot} foot");
                         Console.WriteLine($"{inch} inches = {yard} yards");
                         Console.WriteLine($"{inch} inches = {meter} meters");
+                        Console.WriteLine();
                         Console.ReadLine();
                         break;
 
                     case "3":
                         Console.WriteLine("FOOT to other conversion.");
                         Console.WriteLine();
-                        Console.WriteLine("How many foot do you want to convert? ");
+                        Console.Write("How many foot do you want to convert?: ");
                         footString = Console.ReadLine();
+                        Console.WriteLine();
                         while(!double.TryParse(footString, out foot))
                         {
                             Console.WriteLine("Wrong input. Please enter inches in numbers.");
@@ -96,6 +103,7 @@ namespace Projekt
                         Console.WriteLine($"{foot} foot = {inch} inches");
                         Console.WriteLine($"{foot} foot = {yard} yards");
                         Console.WriteLine($"{foot} foot = {meter} meters");
+                        Console.WriteLine();
                         Console.ReadLine();
 
                         break;
@@ -103,8 +111,9 @@ namespace Projekt
                     case "4":
                         Console.WriteLine("YARD to other conversion.");
                         Console.WriteLine();
-                        Console.WriteLine("How many yards do you want to convert? ");
+                        Console.Write("How many yards do you want to convert?: ");
                         yardString = Console.ReadLine();
+                        Console.WriteLine();
                         while(!double.TryParse(yardString, out yard))
                         {
                             Console.WriteLine("Wrong input. Please enter yards in numbers. ");
@@ -120,14 +129,17 @@ namespace Projekt
                         Console.WriteLine($"{yard} yards = {inch} inches ");
                         Console.WriteLine($"{yard} yards = {foot} foot ");
                         Console.WriteLine($"{yard} yards = {meter} meters ");
+                        Console.WriteLine();
+                        Console.ReadLine();
 
                         break;
 
                     case "5":
                         Console.WriteLine("METER to other conversion.");
                         Console.WriteLine();
-                        Console.WriteLine("How many meter do you want to convert? ");
+                        Console.Write("How many meter do you want to convert?: ");
                         meterString = Console.ReadLine();
+                        Console.WriteLine();
                         while (!double.TryParse(meterString, out meter))
                         {
                             Console.WriteLine("Wrong input. Please enter inches in numbers.");
@@ -143,6 +155,7 @@ namespace Projekt
                         Console.WriteLine($"{meter} meters = {inch} inches");
                         Console.WriteLine($"{meter} meters = {foot} foot");
                         Console.WriteLine($"{meter} meters = {yard} yards");
+                        Console.WriteLine();
                         Console.ReadLine();
                         break;
 
@@ -152,6 +165,7 @@ namespace Projekt
 
                     default:
                         Console.WriteLine("Wrong selection. Please pick an option from the menu!");
+                        Console.ReadLine();
                         break;
                 }
             }
