@@ -20,7 +20,8 @@ namespace Projekt
                         Console.ReadLine();
                         break;
                     case "2":
-                        Console.WriteLine("You picked two!");
+                        LengthConv lengthConv = new LengthConv();
+                        lengthConv.ConvertMenu();
                         Console.ReadLine();
                         break;
                     case "3":
