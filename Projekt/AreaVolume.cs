@@ -63,7 +63,7 @@ namespace Projekt
                         area = width * height;
 
                         Console.WriteLine();
-                        Console.WriteLine($"The area of the rectangle is: {area}");
+                        Console.WriteLine($"The area of the rectangle is: {area:#.##}");
                         Console.ReadLine();
 
                         break;
@@ -95,7 +95,7 @@ namespace Projekt
                         area = (width * height) / 2;
 
                         Console.WriteLine();
-                        Console.WriteLine($"The area of the triangle is: {area} ");
+                        Console.WriteLine($"The area of the triangle is: {area:#.##} ");
                         Console.ReadLine();
 
                         break;
@@ -117,7 +117,7 @@ namespace Projekt
                         area = pi * radius * radius;
 
                         Console.WriteLine();
-                        Console.WriteLine($"The area of the circle is: {area} ");
+                        Console.WriteLine($"The area of the circle is: {area:#.##} ");
                         Console.ReadLine();
                         break;
 
@@ -138,7 +138,7 @@ namespace Projekt
                         volume = width * width * width;
 
                         Console.WriteLine();
-                        Console.WriteLine($"The volume of the cube is: {volume} ");
+                        Console.WriteLine($"The volume of the cube is: {volume:#.##} ");
                         Console.ReadLine();
 
                         break;
@@ -180,7 +180,7 @@ namespace Projekt
                         volume = (length * width * height) / 3;
 
                         Console.WriteLine();
-                        Console.WriteLine($"The volume of the Pyramid is: {volume} ");
+                        Console.WriteLine($"The volume of the Pyramid is: {volume:#.##} ");
                         Console.ReadLine();
 
                         break;
@@ -202,7 +202,7 @@ namespace Projekt
                         volume = 4d / 3d * pi * radius * radius * radius;
 
                         Console.WriteLine();
-                        Console.WriteLine($"The volume of the sphere is: {volume} {0:##.##}");
+                        Console.WriteLine($"The volume of the sphere is: {volume:#.##}");
                         Console.ReadLine();
 
                         break;
@@ -218,19 +218,5 @@ namespace Projekt
             }
             while (loop);
         }
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
