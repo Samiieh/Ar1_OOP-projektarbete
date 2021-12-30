@@ -19,7 +19,8 @@ namespace Projekt
             Console.WriteLine("2. Length converter.");
             Console.WriteLine("3. Speed Distance Time Calculator.");
             Console.WriteLine("4. Calculate Area/Volume.");
-            Console.WriteLine("5. Exit / breKK");
+            Console.WriteLine("5. Convert between Fahrenheit / Celsius / Kelvin.");
+            Console.WriteLine("6. Exit / breKK");
             Console.WriteLine();
             Console.WriteLine("Pick an option from the menu:");
         }

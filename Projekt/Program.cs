@@ -9,7 +9,7 @@ namespace Projekt
             do
             {
                 MainMenu Menu = new MainMenu();             // skapar en instans av klassen MainMenu
-                Menu.Meny();                                // anropar Meny ifrån klassen
+                Menu.Meny();                                // anropar Menyn ifrån klassen
               
 
                 switch (Console.ReadLine())
@@ -30,19 +30,25 @@ namespace Projekt
                         Console.ReadLine();
                         break;
                     case "4":
-                        Console.WriteLine("You picked four");
+                        AreaVolume areaVolume = new AreaVolume();
+                        areaVolume.AreaVolumeCalc();
                         Console.ReadLine();
                         break;
                     case "5":
+                        TempConvert TempConv = new TempConvert();
+                        TempConv.TemperatureConvert();
+                        Console.ReadLine();
+                        break;
+                    case "6":
                     case "breKK":
                         Console.WriteLine("Thank you for using our program, have a great day.");
                         Environment.Exit(0);
                         Console.ReadLine();
                         break;
                     default:
-                        Console.WriteLine("Its stored in the \"HEAP!\" - Baklauv Chau -2021 ");
+                        Console.WriteLine("Wrong selection. Try again!");
                         Console.ReadLine();
-                        break;        
+                        break;
                 }
             } 
             while (true) ;
@@ -54,7 +60,7 @@ namespace Projekt
 
 
 
-        // NOTES //
+// NOTES //
 
 // Klasser
-// MainMenu     Ohmslaw      LengthConvert   SDTCalc   AreaVolume
+// MainMenu     Ohmslaw      LengthConvert   SDTCalc   AreaVolume  Celsius/FahrenheitCalc

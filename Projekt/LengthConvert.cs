@@ -38,6 +38,7 @@ namespace Projekt
                         Console.Write("How many cm do you want to convert?: ");
                         cmString = Console.ReadLine();
                         Console.WriteLine();
+
                         while (!double.TryParse(cmString, out cm))
                         {
                             Console.WriteLine("Wrong input. Please enter cm in numbers.");
@@ -63,6 +64,7 @@ namespace Projekt
                         Console.Write("How many inches do you want to convert? ");
                         inchString = Console.ReadLine();
                         Console.WriteLine();
+
                         while (!double.TryParse(inchString, out inch))
                         {
                             Console.WriteLine("Wrong input. Please enter inches in numbers.");
@@ -88,6 +90,7 @@ namespace Projekt
                         Console.Write("How many foot do you want to convert?: ");
                         footString = Console.ReadLine();
                         Console.WriteLine();
+
                         while(!double.TryParse(footString, out foot))
                         {
                             Console.WriteLine("Wrong input. Please enter inches in numbers.");
@@ -114,6 +117,7 @@ namespace Projekt
                         Console.Write("How many yards do you want to convert?: ");
                         yardString = Console.ReadLine();
                         Console.WriteLine();
+
                         while(!double.TryParse(yardString, out yard))
                         {
                             Console.WriteLine("Wrong input. Please enter yards in numbers. ");
@@ -140,6 +144,7 @@ namespace Projekt
                         Console.Write("How many meter do you want to convert?: ");
                         meterString = Console.ReadLine();
                         Console.WriteLine();
+
                         while (!double.TryParse(meterString, out meter))
                         {
                             Console.WriteLine("Wrong input. Please enter inches in numbers.");
