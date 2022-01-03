@@ -10,35 +10,35 @@ namespace Projekt
 
             while (run)
             {
-                MainMenu Menu = new MainMenu();             // Skapar en instans av klassen "MainMenu"
+                MainMenu Menu = new();             // Skapar en instans av klassen "MainMenu"
                 Menu.Meny();                                // Anropar "Meny" metoden från instansen av klassen.
               
 
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        Ohmslaw ohms = new Ohmslaw();       // Skapar en instans av klassen "Ohmslaw".
+                        Ohmslaw ohms = new();       // Skapar en instans av klassen "Ohmslaw".
                         ohms.OhmsMenu();                    // Anropar metoden "OhmsMenu" från instansen av klassen.
                         break;
 
                     case "2":
-                        LengthConv lengthConv = new LengthConv();
+                        LengthConv lengthConv = new();
                         lengthConv.ConvertMenu();
                         break;
 
                     case "3":
-                        SDTCalc stdc = new SDTCalc();
+                        SDTCalc stdc = new();
                         stdc.SDTCalcMenu();
                         break;
 
                     case "4":
-                        AreaVolume areaVolume = new AreaVolume();
+                        AreaVolume areaVolume = new();
                         areaVolume.AreaVolumeCalc();
 
                         break;
 
                     case "5":
-                        TempConvert TempConv = new TempConvert();
+                        TempConvert TempConv = new();
                         TempConv.TemperatureConvert();
                         break;
 
