@@ -15,7 +15,7 @@ namespace Projekt
             string widthString, heightString, lengthString, radiusString;
             bool loop = true;
 
-            do
+            while(loop)
             {
             Console.Clear();
             Console.WriteLine("You have chosen Area/Volume Calculator");
@@ -34,8 +34,8 @@ namespace Projekt
             Console.WriteLine();
             string menuSelect = Console.ReadLine();
 
-            switch (menuSelect)
-            {
+                switch (menuSelect)
+                {
                     case "1": //  Square/Rectangle //  Area = b * h
                         Console.WriteLine("Calculate the area of a rectangle.");
                         Console.WriteLine();
@@ -65,7 +65,6 @@ namespace Projekt
                         Console.WriteLine();
                         Console.WriteLine($"The area of the rectangle is: {area:#.##}");
                         Console.ReadLine();
-
                         break;
 
                     case "2": //  Triangle    //  Area = (b * h) / 2
@@ -97,7 +96,6 @@ namespace Projekt
                         Console.WriteLine();
                         Console.WriteLine($"The area of the triangle is: {area:#.##} ");
                         Console.ReadLine();
-
                         break;
 
                     case "3": //  Circle  //  Area = pi * r^2     ex: 3.14 * 10 * 10 = 314cm2
@@ -140,7 +138,6 @@ namespace Projekt
                         Console.WriteLine();
                         Console.WriteLine($"The volume of the cube is: {volume:#.##} ");
                         Console.ReadLine();
-
                         break;
 
                     case "5": //  Pyramid //  Volume = (length * width * height)/3
@@ -182,7 +179,6 @@ namespace Projekt
                         Console.WriteLine();
                         Console.WriteLine($"The volume of the Pyramid is: {volume:#.##} ");
                         Console.ReadLine();
-
                         break;
 
                     case "6": //  Sphere  //  Volume = 4/3 * pi * r^3
@@ -204,7 +200,6 @@ namespace Projekt
                         Console.WriteLine();
                         Console.WriteLine($"The volume of the sphere is: {volume:#.##}");
                         Console.ReadLine();
-
                         break;
 
                     case "7":
@@ -214,9 +209,8 @@ namespace Projekt
                     default:
                         Console.WriteLine("Wrong input. Please pick a number in the menu!");
                         break;
+                }
             }
-            }
-            while (loop);
         }
     }
 }

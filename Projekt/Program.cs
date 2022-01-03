@@ -6,7 +6,9 @@ namespace Projekt
     {
         public static void Main()
         {
-            do
+            bool run = true;
+
+            while (run)
             {
                 MainMenu Menu = new MainMenu();             // skapar en instans av klassen MainMenu
                 Menu.Meny();                                // anropar Menyn ifrån klassen
@@ -17,44 +19,41 @@ namespace Projekt
                     case "1":
                         Ohmslaw ohms = new Ohmslaw();       // Creates an instance of Ohms class
                         ohms.OhmsMenu();                    // Calls Ohms menu from ohms class
-                        Console.ReadLine();
                         break;
+
                     case "2":
                         LengthConv lengthConv = new LengthConv();
                         lengthConv.ConvertMenu();
-                        Console.ReadLine();
                         break;
+
                     case "3":
                         SDTCalc stdc = new SDTCalc();
                         stdc.SDTCalcMenu();
-                        Console.ReadLine();
                         break;
+
                     case "4":
                         AreaVolume areaVolume = new AreaVolume();
                         areaVolume.AreaVolumeCalc();
-                        Console.ReadLine();
+
                         break;
+
                     case "5":
                         TempConvert TempConv = new TempConvert();
                         TempConv.TemperatureConvert();
-                        Console.ReadLine();
                         break;
+
                     case "6":
-                    case "breKK":
                         Console.WriteLine("Thank you for using our program, have a great day.");
-                        Environment.Exit(0);
-                        Console.ReadLine();
+                        run = false;
                         break;
+
                     default:
                         Console.WriteLine("Wrong selection. Try again!");
                         Console.ReadLine();
                         break;
                 }
-            } 
-            while (true) ;
-       }
-
-       
+            }
+        } 
     }
 }
 

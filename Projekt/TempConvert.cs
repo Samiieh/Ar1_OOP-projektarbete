@@ -15,7 +15,7 @@ namespace Projekt
             string fahrenheitString , celsiusString, kelvinString;
             bool loop = true;      
             
-            do
+            while (loop)
             {
                 Console.Clear();
                 Console.WriteLine("You have chosen the Fahrenheit / Celsius / Kelvin converter!");
@@ -27,8 +27,7 @@ namespace Projekt
                 Console.WriteLine("3. Kelvin");
                 Console.WriteLine("4. Return to mainmenu");
                 Console.WriteLine();
-                Console.WriteLine("Choose an option:");
-                Console.WriteLine();
+                Console.Write("Choose an option: ");
                 string menuSelect = Console.ReadLine();
 
                 switch (menuSelect)
@@ -37,7 +36,7 @@ namespace Projekt
                         Console.WriteLine("You have chosen Celsius!");  
                         Console.WriteLine();
 
-                        Console.WriteLine("Type in your Celsius degree");
+                        Console.WriteLine("Type in your Celsius degree: ");
                         celsiusString = Console.ReadLine();
                         Console.WriteLine();
 
@@ -53,14 +52,13 @@ namespace Projekt
                         Console.WriteLine($"{celsius} °C = {fahrenheit:#.#} F");
                         Console.WriteLine($"{celsius} °C = {kelvin:#.#} K");
                         Console.ReadLine();
-
                         break;
 
                     case "2":
                         Console.WriteLine("You have chosen Fahrenheit!"); 
                         Console.WriteLine();
 
-                        Console.WriteLine("Type in your Fahrenheit degree");
+                        Console.WriteLine("Type in your Fahrenheit degree: ");
                         fahrenheitString = Console.ReadLine();
                         Console.WriteLine();
 
@@ -75,14 +73,14 @@ namespace Projekt
                         Console.WriteLine($"{fahrenheit} F = {celsius.ToString("#.#")} °C ");
                         Console.WriteLine($"{fahrenheit} F = {kelvin.ToString("#.#")} K");
                         Console.ReadLine();
-
                         break;
 
                     case "3":
-                        Console.WriteLine("You have chosen to Kelvin!");
+                        Console.WriteLine("You have chosen Kelvin!");
                         Console.WriteLine();
-                        Console.WriteLine("Type in your Kelvin degree");
+                        Console.WriteLine("Type in your Kelvin degree: ");
                         kelvinString = Console.ReadLine();
+
                         while (!double.TryParse(kelvinString, out kelvin))            // Error handling for input.
                         {
                             Console.WriteLine("Input is not valid, try again!");
@@ -106,7 +104,6 @@ namespace Projekt
                         break;
                 }
             } 
-            while (loop);
         }
     }
 }

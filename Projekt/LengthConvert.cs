@@ -14,7 +14,7 @@ namespace Projekt
             string cmString, inchString, footString, yardString, meterString;
             bool loop = true;
 
-            do
+            while (loop)
             {
                 Console.Clear();
                 Console.WriteLine("Which unit do you want to convert?");
@@ -174,7 +174,6 @@ namespace Projekt
                         break;
                 }
             }
-            while (loop);
         }
     }
 }

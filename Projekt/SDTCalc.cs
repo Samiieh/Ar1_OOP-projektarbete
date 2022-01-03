@@ -14,9 +14,8 @@ namespace Projekt
             string speedString, distanceString, timeString;
             bool loop = true;
 
-            do
+            while (loop)
             {
-
                 Console.Clear();
                 Console.WriteLine("You have chosen Speed/Distance/Time calculation!");
                 Console.WriteLine();
@@ -31,7 +30,6 @@ namespace Projekt
                 Console.WriteLine();
                 string menuSelect = Console.ReadLine();
 
-
                 switch (menuSelect)
                 {
                     case "1":                                                                // S = D / T
@@ -39,16 +37,18 @@ namespace Projekt
                         Console.WriteLine();
                         Console.WriteLine("You choose speed!");
                         Console.WriteLine();
-                        Console.WriteLine("Type the distance in Km:");
+                        Console.Write("Type the distance in Km: ");
                         distanceString = Console.ReadLine();
+
                         while (!float.TryParse(distanceString, out distance))                     // Error handling for input.
                         {
                             Console.WriteLine("Input is not valid, try again!");
                             distanceString = Console.ReadLine();
                         }
 
-                        Console.WriteLine("Type the time in hours:");
+                        Console.Write("Type the time in hours: ");
                         timeString = Console.ReadLine();
+
                         while (!float.TryParse(timeString, out time))                       // Error handling for input.
                         {
                             Console.WriteLine("Input is not valid, try again!");
@@ -66,8 +66,9 @@ namespace Projekt
                         Console.WriteLine("You choose distance!");
                         Console.WriteLine();
 
-                        Console.WriteLine("Type the speed in Km/h: ");
+                        Console.Write("Type the speed in Km/h: ");
                         speedString = Console.ReadLine();
+
                         while (!float.TryParse(speedString, out speed))               // Error handling for input.
                         {
                             Console.WriteLine("Input is not valid, try again!");
@@ -75,8 +76,9 @@ namespace Projekt
                         }
 
 
-                        Console.WriteLine("Type the time in hours: ");
+                        Console.Write("Type the time in hours: ");
                         timeString = Console.ReadLine();
+
                         while (!float.TryParse(timeString, out time))           // Error handling for input.
                         {
                             Console.WriteLine("Input is not valid, try again!");
@@ -94,16 +96,18 @@ namespace Projekt
                         Console.WriteLine("You choose time!");
                         Console.WriteLine();
 
-                        Console.WriteLine("Type the speed in km/h: ");
+                        Console.Write("Type the speed in km/h: ");
                         speedString = Console.ReadLine();
+
                         while (!float.TryParse(speedString, out speed))                 // Error handling for input.
                         {
                             Console.WriteLine("Input is not valid, try again!");
                             speedString = Console.ReadLine();
                         }
 
-                        Console.WriteLine("Type the distance in km: ");
+                        Console.Write("Type the distance in km: ");
                         distanceString = Console.ReadLine();
+
                         while (!float.TryParse(distanceString, out distance))                 // Error handling for input.
                         {
                             Console.WriteLine("Input is not valid, try again!");
@@ -123,7 +127,6 @@ namespace Projekt
                         break;
                 }
             }
-            while (loop);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Projekt
             string currentString, voltageString, resistanceString;
             bool loop = true;
 
-            do
+            while (loop)
             {
 
                 Console.Clear();
@@ -27,7 +27,7 @@ namespace Projekt
                 Console.WriteLine("3. viva la Resistance");
                 Console.WriteLine("4. Return to mainmenu");
                 Console.WriteLine();
-                Console.WriteLine("Choose an option:");
+                Console.Write("Choose an option: ");
                 Console.WriteLine();
                 string menuSelect = Console.ReadLine();
 
@@ -39,16 +39,18 @@ namespace Projekt
                         Console.WriteLine();
                         Console.WriteLine("You choose voltage!");
                         Console.WriteLine();
-                        Console.WriteLine("Type the resistance:");
+                        Console.Write("Type the resistance: ");
                         resistanceString = Console.ReadLine();
+
                         while (!float.TryParse(resistanceString, out resistance))            // Error handling for input.
                         {
                             Console.WriteLine("Input is not valid, try again!");
                             resistanceString = Console.ReadLine();
                         }
 
-                        Console.WriteLine("Type the ampere:");
+                        Console.Write("Type the current: : ");
                         currentString = Console.ReadLine();
+
                         while (!float.TryParse(currentString, out current))                 // Error handling for input.
                         {
                             Console.WriteLine("Input is not valid, try again!");
@@ -66,7 +68,7 @@ namespace Projekt
                         Console.WriteLine("You choose current!");
                         Console.WriteLine();
 
-                        Console.WriteLine("Type the current: ");
+                        Console.Write("Type the voltage: ");
                         voltageString = Console.ReadLine();
                         while (!float.TryParse(voltageString, out voltage))                 // Error handling for input.
                         {
@@ -116,15 +118,16 @@ namespace Projekt
                         Console.WriteLine($"The resistance is: {resistance} ohm");
                         Console.ReadLine();
                         break;
+
                     case "4":
                         loop = false;                                                       // Stops the current loop and returns user to main menu.
                         break;
+
                     default:
                         Console.WriteLine("Wrong option, please enter an number between 1 and 4");
                         break;
                 } 
             }
-            while (loop);
         }
     }
 }
