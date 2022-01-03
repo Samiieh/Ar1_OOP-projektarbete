@@ -33,7 +33,7 @@ namespace Projekt
 
                 switch (menuSelect)
                 {
-                    case "1":                                                                // S = D / T
+                    case "1":                       // S = D / T
                         Console.Clear();
                         Console.WriteLine();
                         Console.WriteLine("You choose speed!");
@@ -53,7 +53,7 @@ namespace Projekt
                         Console.ReadLine();
                         break;
 
-                    case "2":                                                               // D = S * T
+                    case "2":                       // D = S * T
                         Console.Clear();
                         Console.WriteLine();
                         Console.WriteLine("You choose distance!");
@@ -72,7 +72,7 @@ namespace Projekt
                         Console.ReadLine();
                         break;
 
-                    case "3":                                                               // T = D / S
+                    case "3":                       // T = D / S
                         Console.Clear();
                         Console.WriteLine();
                         Console.WriteLine("You choose time!");

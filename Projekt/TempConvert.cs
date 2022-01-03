@@ -41,9 +41,7 @@ namespace Projekt
                         Console.WriteLine("Type in your Celsius degree: ");
 
                         TryParseDouble();
-
                         celsius = userDouble;
-                    
 
                         fahrenheit = (celsius * 9d / 5d) + 32d;                         // Celsius (°C) times 9/5 plus 32:
                         kelvin = celsius + 273.15;                                      // celcius to kelvin = 1°C + 273.15
@@ -60,9 +58,7 @@ namespace Projekt
                         Console.WriteLine("Type in your Fahrenheit degree: ");
 
                         TryParseDouble();
-
                         fahrenheit = userDouble;
-
                      
                         celsius = (fahrenheit - 32d) * 5d / 9d;         // (1°F − 32) × 5/9 = -17,22°C
                         kelvin = (fahrenheit - 32d) * 5 / 9 + 273.15;   // (1°F − 32) × 5/9 + 273.15 = 255,928K
@@ -78,13 +74,10 @@ namespace Projekt
                         Console.WriteLine("Type in your Kelvin degree: ");
 
                         TryParseDouble();
-
                         kelvin = userDouble;
-                     
 
                         celsius = kelvin - 273.15;                          // 1K − 273.15 = -272,1°C
                         fahrenheit = (kelvin * 9d / 5d) - 459.67;           // (1K − 273.15) × 9/5 + 32 = -457,9°F
-
 
                         Console.WriteLine($"{kelvin} K = {celsius.ToString("#.#")} °C ");
                         Console.WriteLine($"{kelvin} K = {fahrenheit.ToString("#.#")} F ");
