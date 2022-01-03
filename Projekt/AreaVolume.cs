@@ -165,16 +165,15 @@ namespace Projekt
         }
         public double TryParseDouble()
         {
-            double result;
-
             userString = Console.ReadLine();
             Console.WriteLine();
-            while (!double.TryParse(userString, out result))
+
+            while (!double.TryParse(userString, out userDouble))
             {
                 Console.WriteLine("Input is not valid, try again!");
                 userString = Console.ReadLine();
             }
-            userDouble = result;
+
             return userDouble;
         }
     }

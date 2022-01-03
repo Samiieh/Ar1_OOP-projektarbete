@@ -105,16 +105,15 @@ namespace Projekt
         }
         public float TryParseFloat()
         {
-            float result;
-
             userString = Console.ReadLine();
             Console.WriteLine();
-            while (!float.TryParse(userString, out result))
+
+            while (!float.TryParse(userString, out userFloat))
             {
                 Console.WriteLine("Input is not valid, try again!");
                 userString = Console.ReadLine();
             }
-            userFloat = result;
+
             return userFloat;
         }
     }

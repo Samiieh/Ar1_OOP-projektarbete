@@ -9,8 +9,8 @@ namespace Projekt
     public class Ohmslaw
     {
 
-        public string userString { get; set; }
-        public float userFloat { get; set; }
+        public string userString;   // Universal input sträng för hantering, istället för att skapa en för varje mått.
+        public float userFloat;     // Float för att hantera den parsade strängen.
         public void OhmsMenu()
         {
 
@@ -111,16 +111,15 @@ namespace Projekt
         }
         public float TryParseFloat()
         {
-            float result;
-
             userString = Console.ReadLine();
             Console.WriteLine();
-            while (!float.TryParse(userString, out result))
+
+            while (!float.TryParse(userString, out userFloat))
             {
                 Console.WriteLine("Input is not valid, try again!");
                 userString = Console.ReadLine();
             }
-            userFloat = result;
+
             return userFloat;
         }
     }

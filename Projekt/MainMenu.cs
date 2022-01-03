@@ -24,8 +24,5 @@ namespace Projekt
             Console.WriteLine();
             Console.Write("Pick an option from the menu: ");
         }
-
-
-
     }
 }

@@ -8,8 +8,8 @@ namespace Projekt
 {
     public class LengthConv
     {
-        public string userString;  //Universal input sträng för hantering, istället för att skapa en för varje mått.
-        public double userDouble;
+        public string userString;  // Universal input sträng för hantering, istället för att skapa en för varje mått.
+        public double userDouble;  // Double för att hantera den parsade strängen.
         
         public void ConvertMenu()
         {
@@ -155,17 +155,16 @@ namespace Projekt
         }
 
         public double TryParseDouble()      // Error hanterings metod - Som kollar så att inmatade värdet är en siffra.
-        {
-            double result;
-            
+        {          
             userString = Console.ReadLine();
             Console.WriteLine();
-            while (!double.TryParse(userString, out result))
+
+            while (!double.TryParse(userString, out userDouble))
             {
               Console.WriteLine("Input is not valid, try again!");
               userString = Console.ReadLine();
             }
-            userDouble = result;
+
             return userDouble;
         }
     }
