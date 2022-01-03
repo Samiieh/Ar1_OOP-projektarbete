@@ -8,10 +8,13 @@ namespace Projekt
 {
     public class Ohmslaw
     {
+
+        public string userString { get; set; }
+        public float userFloat { get; set; }
         public void OhmsMenu()
         {
+
             float current, voltage, resistance;
-            string currentString, voltageString, resistanceString;
             bool loop = true;
 
             while (loop)
@@ -40,22 +43,14 @@ namespace Projekt
                         Console.WriteLine("You choose voltage!");
                         Console.WriteLine();
                         Console.Write("Type the resistance: ");
-                        resistanceString = Console.ReadLine();
 
-                        while (!float.TryParse(resistanceString, out resistance))            // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            resistanceString = Console.ReadLine();
-                        }
+                        TryParseFloat();
+                        resistance = userFloat;
 
                         Console.Write("Type the current: : ");
-                        currentString = Console.ReadLine();
 
-                        while (!float.TryParse(currentString, out current))                 // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            currentString = Console.ReadLine();
-                        }
+                        TryParseFloat();
+                        current = userFloat;
 
                         voltage = resistance * current;
                         Console.WriteLine($"The voltage is: {voltage} volt");
@@ -69,21 +64,14 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.Write("Type the voltage: ");
-                        voltageString = Console.ReadLine();
-                        while (!float.TryParse(voltageString, out voltage))                 // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            voltageString = Console.ReadLine();
-                        }
 
+                        TryParseFloat();
+                        voltage = userFloat;
 
                         Console.WriteLine("Type the resistance: ");
-                        resistanceString = Console.ReadLine();
-                        while (!float.TryParse(resistanceString, out resistance))           // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            resistanceString = Console.ReadLine();
-                        }
+
+                        TryParseFloat();
+                        resistance = userFloat;
 
                         current = voltage / resistance;
                         Console.WriteLine($"The current is: {current} ampere");
@@ -97,22 +85,14 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.WriteLine("Type the voltage: ");
-                        voltageString = Console.ReadLine();
-                        while (!float.TryParse(voltageString, out voltage))                 // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            voltageString = Console.ReadLine();
-                        }
+
+                        TryParseFloat();
+                        voltage = userFloat;
 
                         Console.WriteLine("Type the current: ");
-                        currentString = Console.ReadLine();
-                        while (!float.TryParse(currentString, out current))                 // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            currentString = Console.ReadLine();
 
-                        }
-
+                        TryParseFloat();
+                        current = userFloat;
 
                         resistance = voltage / current;
                         Console.WriteLine($"The resistance is: {resistance} ohm");
@@ -128,6 +108,20 @@ namespace Projekt
                         break;
                 } 
             }
+        }
+        public float TryParseFloat()
+        {
+            float result;
+
+            userString = Console.ReadLine();
+            Console.WriteLine();
+            while (!float.TryParse(userString, out result))
+            {
+                Console.WriteLine("Input is not valid, try again!");
+                userString = Console.ReadLine();
+            }
+            userFloat = result;
+            return userFloat;
         }
     }
 }

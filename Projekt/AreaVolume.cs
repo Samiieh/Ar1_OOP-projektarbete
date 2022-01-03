@@ -8,11 +8,12 @@ namespace Projekt
 {
     public class AreaVolume
     {
+        public string userString;
+        public double userDouble;
         public void AreaVolumeCalc()
         {
             double width, height, length, radius, pi, area, volume;
             pi = 3.1415926535898;
-            string widthString, heightString, lengthString, radiusString;
             bool loop = true;
 
             while(loop)
@@ -41,24 +42,14 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.Write("Enter width: ");
-                        widthString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(widthString, out width))
-                        {
-                            Console.WriteLine("Wrong input. Please enter width in whole number.");
-                            widthString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        width = userDouble;
 
                         Console.Write("Enter height: ");
-                        heightString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(heightString, out height))
-                        {
-                            Console.WriteLine("Wrong input. Please enter height in whole number.");
-                            heightString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        height = userDouble;
 
                         area = width * height;
 
@@ -72,24 +63,14 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.Write("Enter width: ");
-                        widthString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(widthString, out width))
-                        {
-                            Console.WriteLine("Wrong input. Please enter width in whole number.");
-                            widthString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        width = userDouble;
 
                         Console.Write("Enter height: ");
-                        heightString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(heightString, out height))
-                        {
-                            Console.WriteLine("Wrong input. Please enter height in whole number.");
-                            heightString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        height = userDouble;
 
                         area = (width * height) / 2;
 
@@ -103,14 +84,9 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.Write(" Enter the radius of the circle: ");
-                        radiusString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(radiusString, out radius))
-                        {
-                            Console.WriteLine("Wrong input please enter the radius in numbers: ");
-                            radiusString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        radius = userDouble;
 
                         area = pi * radius * radius;
 
@@ -124,14 +100,9 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.Write("Enter width: ");
-                        widthString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(widthString, out width))
-                        {
-                            Console.WriteLine("Wrong input please enter width in number!");
-                            widthString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        width = userDouble;
 
                         volume = width * width * width;
 
@@ -145,34 +116,19 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.Write("Enter lenght: ");
-                        lengthString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(lengthString, out length))
-                        {
-                            Console.WriteLine("Wrong input please enter lenght in number!");
-                            lengthString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        length = userDouble;
 
                         Console.Write("Enter width: ");
-                        widthString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(widthString, out width))
-                        {
-                            Console.WriteLine("Wrong input please enter width in number!");
-                            widthString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        width = userDouble;
 
                         Console.Write("Enter height: ");
-                        heightString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(heightString, out height))
-                        {
-                            Console.WriteLine("Wrong input please enter width in number!");
-                            heightString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        height = userDouble;
 
                         volume = (length * width * height) / 3;
 
@@ -186,14 +142,9 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.Write(" Enter the radius of the circle: ");
-                        radiusString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(radiusString, out radius))
-                        {
-                            Console.WriteLine("Wrong input please enter the radius in numbers: ");
-                            radiusString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        radius = userDouble;
 
                         volume = 4d / 3d * pi * radius * radius * radius;
 
@@ -211,6 +162,20 @@ namespace Projekt
                         break;
                 }
             }
+        }
+        public double TryParseDouble()
+        {
+            double result;
+
+            userString = Console.ReadLine();
+            Console.WriteLine();
+            while (!double.TryParse(userString, out result))
+            {
+                Console.WriteLine("Input is not valid, try again!");
+                userString = Console.ReadLine();
+            }
+            userDouble = result;
+            return userDouble;
         }
     }
 }

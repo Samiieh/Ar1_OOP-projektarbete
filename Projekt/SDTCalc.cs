@@ -8,10 +8,11 @@ namespace Projekt
 {
     public class SDTCalc
     {
+        public string userString;
+        public float userFloat;
         public void SDTCalcMenu()
         {
             float speed, distance, time;
-            string speedString, distanceString, timeString;
             bool loop = true;
 
             while (loop)
@@ -38,22 +39,14 @@ namespace Projekt
                         Console.WriteLine("You choose speed!");
                         Console.WriteLine();
                         Console.Write("Type the distance in Km: ");
-                        distanceString = Console.ReadLine();
 
-                        while (!float.TryParse(distanceString, out distance))                     // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            distanceString = Console.ReadLine();
-                        }
+                        TryParseFloat();
+                        distance = userFloat;
 
                         Console.Write("Type the time in hours: ");
-                        timeString = Console.ReadLine();
 
-                        while (!float.TryParse(timeString, out time))                       // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            timeString = Console.ReadLine();
-                        }
+                        TryParseFloat();
+                        time = userFloat;
 
                         speed = time * distance;
                         Console.WriteLine($"The speed is: {speed} Km/h");
@@ -67,23 +60,12 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.Write("Type the speed in Km/h: ");
-                        speedString = Console.ReadLine();
-
-                        while (!float.TryParse(speedString, out speed))               // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            speedString = Console.ReadLine();
-                        }
-
+                        TryParseFloat();
+                        speed = userFloat;
 
                         Console.Write("Type the time in hours: ");
-                        timeString = Console.ReadLine();
-
-                        while (!float.TryParse(timeString, out time))           // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            timeString = Console.ReadLine();
-                        }
+                        TryParseFloat();
+                        time = userFloat;
 
                         distance = speed * time;
                         Console.WriteLine($"The distance is: {distance} Km");
@@ -97,36 +79,43 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.Write("Type the speed in km/h: ");
-                        speedString = Console.ReadLine();
 
-                        while (!float.TryParse(speedString, out speed))                 // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            speedString = Console.ReadLine();
-                        }
+                        TryParseFloat();
+                        speed = userFloat;
 
                         Console.Write("Type the distance in km: ");
-                        distanceString = Console.ReadLine();
 
-                        while (!float.TryParse(distanceString, out distance))                 // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            distanceString = Console.ReadLine();
-
-                        }
+                        TryParseFloat();
+                        distance = userFloat;
 
                         time = distance / speed;
                         Console.WriteLine($"The traveltime is: {time} hours");
                         Console.ReadLine();
                         break;
+
                     case "4":
                         loop = false;                                                       // Stops the current loop and returns user to main menu.
                         break;
+
                     default:
                         Console.WriteLine("Wrong option, please enter an number between 1 and 4");
                         break;
                 }
             }
+        }
+        public float TryParseFloat()
+        {
+            float result;
+
+            userString = Console.ReadLine();
+            Console.WriteLine();
+            while (!float.TryParse(userString, out result))
+            {
+                Console.WriteLine("Input is not valid, try again!");
+                userString = Console.ReadLine();
+            }
+            userFloat = result;
+            return userFloat;
         }
     }
 }

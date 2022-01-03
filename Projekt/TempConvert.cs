@@ -8,11 +8,13 @@ namespace Projekt
 {
     internal class TempConvert
     {
+        public string userString; 
+        public double userDouble; 
         public void TemperatureConvert()
         {
 
             double fahrenheit, celsius, kelvin;
-            string fahrenheitString , celsiusString, kelvinString;
+
             bool loop = true;      
             
             while (loop)
@@ -37,14 +39,11 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.WriteLine("Type in your Celsius degree: ");
-                        celsiusString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(celsiusString, out celsius))            // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            celsiusString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+
+                        celsius = userDouble;
+                    
 
                         fahrenheit = (celsius * 9d / 5d) + 32d;                         // Celsius (°C) times 9/5 plus 32:
                         kelvin = celsius + 273.15;                                      // celcius to kelvin = 1°C + 273.15
@@ -59,14 +58,12 @@ namespace Projekt
                         Console.WriteLine();
 
                         Console.WriteLine("Type in your Fahrenheit degree: ");
-                        fahrenheitString = Console.ReadLine();
-                        Console.WriteLine();
 
-                        while (!double.TryParse(fahrenheitString, out fahrenheit))            // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            fahrenheitString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+
+                        fahrenheit = userDouble;
+
+                     
                         celsius = (fahrenheit - 32d) * 5d / 9d;         // (1°F − 32) × 5/9 = -17,22°C
                         kelvin = (fahrenheit - 32d) * 5 / 9 + 273.15;   // (1°F − 32) × 5/9 + 273.15 = 255,928K
 
@@ -79,13 +76,11 @@ namespace Projekt
                         Console.WriteLine("You have chosen Kelvin!");
                         Console.WriteLine();
                         Console.WriteLine("Type in your Kelvin degree: ");
-                        kelvinString = Console.ReadLine();
 
-                        while (!double.TryParse(kelvinString, out kelvin))            // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            kelvinString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+
+                        kelvin = userDouble;
+                     
 
                         celsius = kelvin - 273.15;                          // 1K − 273.15 = -272,1°C
                         fahrenheit = (kelvin * 9d / 5d) - 459.67;           // (1K − 273.15) × 9/5 + 32 = -457,9°F
@@ -104,6 +99,20 @@ namespace Projekt
                         break;
                 }
             } 
+        }
+        public double TryParseDouble()
+        {
+            double result;
+
+            userString = Console.ReadLine();
+            Console.WriteLine();
+            while (!double.TryParse(userString, out result))
+            {
+                Console.WriteLine("Input is not valid, try again!");
+                userString = Console.ReadLine();
+            }
+            userDouble = result;
+            return userDouble;
         }
     }
 }
