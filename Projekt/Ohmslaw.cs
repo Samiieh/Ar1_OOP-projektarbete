@@ -100,7 +100,7 @@ namespace Projekt
                         break;
 
                     case "4":
-                        loop = false;                                                       // Stops the current loop and returns user to main menu.
+                        loop = false;           // Stops the current loop and returns user to main menu.
                         break;
 
                     default:

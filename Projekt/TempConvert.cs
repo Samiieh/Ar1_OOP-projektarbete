@@ -8,14 +8,15 @@ namespace Projekt
 {
     internal class TempConvert
     {
-        public string userString; 
-        public double userDouble; 
+        public string userString;
+        public double userDouble;
+
         public void TemperatureConvert()
         {
 
             double fahrenheit, celsius, kelvin;
 
-            bool loop = true;      
+            bool loop = true;
             
             while (loop)
             {
@@ -32,7 +33,7 @@ namespace Projekt
                 Console.Write("Choose an option: ");
                 string menuSelect = Console.ReadLine();
 
-                switch (menuSelect)
+                switch (menuSelect) // Vi valde att köra koden direkt i de olika fallen, men hade kunnat skapa egna metoder som anropats.
                 {
                     case "1":
                         Console.WriteLine("You have chosen Celsius!");  
@@ -43,8 +44,8 @@ namespace Projekt
                         TryParseDouble();
                         celsius = userDouble;
 
-                        fahrenheit = (celsius * 9d / 5d) + 32d;                         // Celsius (°C) times 9/5 plus 32:
-                        kelvin = celsius + 273.15;                                      // celcius to kelvin = 1°C + 273.15
+                        fahrenheit = (celsius * 9d / 5d) + 32d;                  // Celsius (°C) times 9/5 plus 32:
+                        kelvin = celsius + 273.15;                               // celcius to kelvin = 1°C + 273.15
 
                         Console.WriteLine($"{celsius} °C = {fahrenheit:#.#} F");
                         Console.WriteLine($"{celsius} °C = {kelvin:#.#} K");
@@ -60,8 +61,8 @@ namespace Projekt
                         TryParseDouble();
                         fahrenheit = userDouble;
                      
-                        celsius = (fahrenheit - 32d) * 5d / 9d;         // (1°F − 32) × 5/9 = -17,22°C
-                        kelvin = (fahrenheit - 32d) * 5 / 9 + 273.15;   // (1°F − 32) × 5/9 + 273.15 = 255,928K
+                        celsius = (fahrenheit - 32d) * 5d / 9d;                 // (1°F − 32) × 5/9 = -17,22°C
+                        kelvin = (fahrenheit - 32d) * 5 / 9 + 273.15;           // (1°F − 32) × 5/9 + 273.15 = 255,928K
 
                         Console.WriteLine($"{fahrenheit} F = {celsius.ToString("#.#")} °C ");
                         Console.WriteLine($"{fahrenheit} F = {kelvin.ToString("#.#")} K");
@@ -76,8 +77,8 @@ namespace Projekt
                         TryParseDouble();
                         kelvin = userDouble;
 
-                        celsius = kelvin - 273.15;                          // 1K − 273.15 = -272,1°C
-                        fahrenheit = (kelvin * 9d / 5d) - 459.67;           // (1K − 273.15) × 9/5 + 32 = -457,9°F
+                        celsius = kelvin - 273.15;                              // 1K − 273.15 = -272,1°C
+                        fahrenheit = (kelvin * 9d / 5d) - 459.67;               // (1K − 273.15) × 9/5 + 32 = -457,9°F
 
                         Console.WriteLine($"{kelvin} K = {celsius.ToString("#.#")} °C ");
                         Console.WriteLine($"{kelvin} K = {fahrenheit.ToString("#.#")} F ");
@@ -85,7 +86,7 @@ namespace Projekt
                         break;
 
                     case "4":
-                        loop = false;
+                        loop = false;       // Bryter den aktuella loopen och tar användaren tillbaka till huvudmenyn.
                         break;
                         
                     default:
@@ -93,7 +94,7 @@ namespace Projekt
                 }
             } 
         }
-        public double TryParseDouble()
+        public double TryParseDouble()      // Felinmatnings hantering som egen metod för att slippa upprepa koden vid varje inmatnings tillfälle.
         {
             userString = Console.ReadLine();
             Console.WriteLine();

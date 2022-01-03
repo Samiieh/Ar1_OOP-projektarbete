@@ -10,15 +10,15 @@ namespace Projekt
 
             while (run)
             {
-                MainMenu Menu = new MainMenu();             // skapar en instans av klassen MainMenu
-                Menu.Meny();                                // anropar Menyn ifrån klassen
+                MainMenu Menu = new MainMenu();             // Skapar en instans av klassen "MainMenu"
+                Menu.Meny();                                // Anropar "Meny" metoden från instansen av klassen.
               
 
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        Ohmslaw ohms = new Ohmslaw();       // Creates an instance of Ohms class
-                        ohms.OhmsMenu();                    // Calls Ohms menu from ohms class
+                        Ohmslaw ohms = new Ohmslaw();       // Skapar en instans av klassen "Ohmslaw".
+                        ohms.OhmsMenu();                    // Anropar metoden "OhmsMenu" från instansen av klassen.
                         break;
 
                     case "2":
@@ -44,7 +44,7 @@ namespace Projekt
 
                     case "6":
                         Console.WriteLine("Thank you for using our program, have a great day.");
-                        run = false;
+                        run = false;        //Avslutar programmet genom att återge false till run som avslutar loopen.
                         break;
 
                     default:

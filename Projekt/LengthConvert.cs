@@ -35,29 +35,29 @@ namespace Projekt
                 switch (menuSelect)
                 {
                     case "1":
-                        Console.WriteLine("CM to other conversion.");
+                        Console.WriteLine("» CM Conversion «");
                         Console.WriteLine();
                         Console.Write("How many cm do you want to convert?: ");
 
                         TryParseDouble();   // Anropar error handling metoden.
 
-                        cm = userDouble;
+                        cm = userDouble;    // sätter det återgivna värdet som cm.
 
                         inch = cm / 2.54;
-                        foot = cm / 30.48;
+                        foot = cm / 30.48;      // Omvandlar cm till de andra värdena.
                         yard = cm / 91.44;
                         meter = cm / 100;
 
-                        Console.WriteLine($"{cm} cm = {inch:#.##} inches");
-                        Console.WriteLine($"{cm} cm = {foot:#.##} foot");
-                        Console.WriteLine($"{cm} cm = {yard:#.##} yards");
-                        Console.WriteLine($"{cm} cm = {meter:#.##} meters");
+                        Console.WriteLine($"{cm} cm = {inch:#.###} inches");
+                        Console.WriteLine($"{cm} cm = {foot:#.###} foot");  // Skriver ut vad inmatad värde i cm är i de övriga med 3decimalers precision.
+                        Console.WriteLine($"{cm} cm = {yard:#.###} yards");
+                        Console.WriteLine($"{cm} cm = {meter:#.###} meters");
                         Console.WriteLine();
                         Console.ReadLine();
                         break;
 
                     case "2":
-                        Console.WriteLine("INCH to other conversion.");
+                        Console.WriteLine("» INCH Conversion «");
                         Console.WriteLine();
                         Console.Write("How many inches do you want to convert? ");
 
@@ -69,16 +69,16 @@ namespace Projekt
                         yard = inch / 36;
                         meter = inch / 39.37;
 
-                        Console.WriteLine($"{inch} inches = {cm:#.##} centimeters");
-                        Console.WriteLine($"{inch} inches = {foot:#.##} foot");
-                        Console.WriteLine($"{inch} inches = {yard:#.##} yards");
-                        Console.WriteLine($"{inch} inches = {meter:#.##} meters");
+                        Console.WriteLine($"{inch} inches = {cm:#.###} centimeters");
+                        Console.WriteLine($"{inch} inches = {foot:#.###} foot");
+                        Console.WriteLine($"{inch} inches = {yard:#.###} yards");
+                        Console.WriteLine($"{inch} inches = {meter:#.###} meters");
                         Console.WriteLine();
                         Console.ReadLine();
                         break;
 
                     case "3":
-                        Console.WriteLine("FOOT to other conversion.");
+                        Console.WriteLine("» FOOT Conversion «");
                         Console.WriteLine();
                         Console.Write("How many foot do you want to convert?: ");
 
@@ -90,17 +90,17 @@ namespace Projekt
                         yard = foot / 0.3;
                         meter = foot / 0.3048;
 
-                        Console.WriteLine($"{foot} foot = {cm:#.##} centimeters");
-                        Console.WriteLine($"{foot} foot = {inch:#.##} inches");
-                        Console.WriteLine($"{foot} foot = {yard:#.##} yards");
-                        Console.WriteLine($"{foot} foot = {meter:#.##} meters");
+                        Console.WriteLine($"{foot} foot = {cm:#.###} centimeters");
+                        Console.WriteLine($"{foot} foot = {inch:#.###} inches");
+                        Console.WriteLine($"{foot} foot = {yard:#.###} yards");
+                        Console.WriteLine($"{foot} foot = {meter:#.###} meters");
                         Console.WriteLine();
                         Console.ReadLine();
 
                         break;
 
                     case "4":
-                        Console.WriteLine("YARD to other conversion.");
+                        Console.WriteLine("» YARD Conversion «");
                         Console.WriteLine();
                         Console.Write("How many yards do you want to convert?: ");
 
@@ -112,17 +112,17 @@ namespace Projekt
                         foot = yard * 3;
                         meter = yard / 1.094;
 
-                        Console.WriteLine($"{yard} yards = {cm:#.##} centimeters ");
-                        Console.WriteLine($"{yard} yards = {inch:#.##} inches ");
-                        Console.WriteLine($"{yard} yards = {foot:#.##} foot ");
-                        Console.WriteLine($"{yard} yards = {meter:#.##} meters ");
+                        Console.WriteLine($"{yard} yards = {cm:#.###} centimeters ");
+                        Console.WriteLine($"{yard} yards = {inch:#.###} inches ");
+                        Console.WriteLine($"{yard} yards = {foot:#.###} foot ");
+                        Console.WriteLine($"{yard} yards = {meter:#.###} meters ");
                         Console.WriteLine();
                         Console.ReadLine();
 
                         break;
 
                     case "5":
-                        Console.WriteLine("METER to other conversion.");
+                        Console.WriteLine("» METER Conversion «");
                         Console.WriteLine();
                         Console.Write("How many meter do you want to convert?: ");
 
@@ -134,10 +134,10 @@ namespace Projekt
                         foot = meter * 3.281;
                         yard = meter * 1.094;
 
-                        Console.WriteLine($"{meter} meters = {cm:#.##} centimeters");
-                        Console.WriteLine($"{meter} meters = {inch:#.##} inches");
-                        Console.WriteLine($"{meter} meters = {foot:#.##} foot");
-                        Console.WriteLine($"{meter} meters = {yard:#.##} yards");
+                        Console.WriteLine($"{meter} meters = {cm:#.###} centimeters");
+                        Console.WriteLine($"{meter} meters = {inch:#.###} inches");
+                        Console.WriteLine($"{meter} meters = {foot:#.###} foot");
+                        Console.WriteLine($"{meter} meters = {yard:#.###} yards");
                         Console.WriteLine();
                         Console.ReadLine();
                         break;
