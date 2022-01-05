@@ -15,17 +15,14 @@ namespace Projekt
             Console.WriteLine();
             Console.WriteLine("» Main Menu «");
             Console.WriteLine();
-            Console.WriteLine("1. Ohmslaw.");
-            Console.WriteLine("2. Length converter.");
-            Console.WriteLine("3. Speed Distance Time Calculator.");
-            Console.WriteLine("4. Calculate Area/Volume.");
-            Console.WriteLine("5. Convert between Fahrenheit / Celsius / Kelvin.");
-            Console.WriteLine("6. Exit / breKK");
+            Console.WriteLine("1. » Ohmslaw");
+            Console.WriteLine("2. » Length converter");
+            Console.WriteLine("3. » Speed Distance Time Calculator");
+            Console.WriteLine("4. » Calculate Area/Volume");
+            Console.WriteLine("5. » Convert between Fahrenheit / Celsius / Kelvin");
+            Console.WriteLine("6. » Exit");
             Console.WriteLine();
-            Console.WriteLine("Pick an option from the menu:");
+            Console.Write("Pick an option from the menu: ");
         }
-
-
-
     }
 }

@@ -6,55 +6,54 @@ namespace Projekt
     {
         public static void Main()
         {
-            do
+            bool run = true;
+
+            while (run)
             {
-                MainMenu Menu = new MainMenu();             // skapar en instans av klassen MainMenu
-                Menu.Meny();                                // anropar Menyn ifrån klassen
+                MainMenu Menu = new();             // Skapar en instans av klassen "MainMenu"
+                Menu.Meny();                                // Anropar "Meny" metoden från instansen av klassen.
               
 
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        Ohmslaw ohms = new Ohmslaw();       // Creates an instance of Ohms class
-                        ohms.OhmsMenu();                    // Calls Ohms menu from ohms class
-                        Console.ReadLine();
+                        Ohmslaw ohms = new();       // Skapar en instans av klassen "Ohmslaw".
+                        ohms.OhmsMenu();                    // Anropar metoden "OhmsMenu" från instansen av klassen.
                         break;
+
                     case "2":
-                        LengthConv lengthConv = new LengthConv();
+                        LengthConv lengthConv = new();
                         lengthConv.ConvertMenu();
-                        Console.ReadLine();
                         break;
+
                     case "3":
-                        SDTCalc stdc = new SDTCalc();
+                        SDTCalc stdc = new();
                         stdc.SDTCalcMenu();
-                        Console.ReadLine();
                         break;
+
                     case "4":
-                        AreaVolume areaVolume = new AreaVolume();
+                        AreaVolume areaVolume = new();
                         areaVolume.AreaVolumeCalc();
-                        Console.ReadLine();
+
                         break;
+
                     case "5":
-                        TempConvert TempConv = new TempConvert();
+                        TempConvert TempConv = new();
                         TempConv.TemperatureConvert();
-                        Console.ReadLine();
                         break;
+
                     case "6":
-                    case "breKK":
                         Console.WriteLine("Thank you for using our program, have a great day.");
-                        Environment.Exit(0);
-                        Console.ReadLine();
+                        run = false;        //Avslutar programmet genom att återge false till run som avslutar loopen.
                         break;
+
                     default:
                         Console.WriteLine("Wrong selection. Try again!");
                         Console.ReadLine();
                         break;
                 }
-            } 
-            while (true) ;
-       }
-
-       
+            }
+        } 
     }
 }
 

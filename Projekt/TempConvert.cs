@@ -8,14 +8,17 @@ namespace Projekt
 {
     internal class TempConvert
     {
+        public string userString;
+        public double userDouble;
+
         public void TemperatureConvert()
         {
 
             double fahrenheit, celsius, kelvin;
-            string fahrenheitString , celsiusString, kelvinString;
-            bool loop = true;      
+
+            bool loop = true;
             
-            do
+            while (loop)
             {
                 Console.Clear();
                 Console.WriteLine("You have chosen the Fahrenheit / Celsius / Kelvin converter!");
@@ -27,71 +30,55 @@ namespace Projekt
                 Console.WriteLine("3. Kelvin");
                 Console.WriteLine("4. Return to mainmenu");
                 Console.WriteLine();
-                Console.WriteLine("Choose an option:");
-                Console.WriteLine();
+                Console.Write("Choose an option: ");
                 string menuSelect = Console.ReadLine();
 
-                switch (menuSelect)
+                switch (menuSelect) // Vi valde att köra koden direkt i de olika fallen, men hade kunnat skapa egna metoder som anropats.
                 {
                     case "1":
                         Console.WriteLine("You have chosen Celsius!");  
                         Console.WriteLine();
 
-                        Console.WriteLine("Type in your Celsius degree");
-                        celsiusString = Console.ReadLine();
-                        Console.WriteLine();
+                        Console.WriteLine("Type in your Celsius degree: ");
 
-                        while (!double.TryParse(celsiusString, out celsius))            // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            celsiusString = Console.ReadLine();
-                        }
+                        TryParseDouble();
+                        celsius = userDouble;
 
-                        fahrenheit = (celsius * 9d / 5d) + 32d;                         // Celsius (°C) times 9/5 plus 32:
-                        kelvin = celsius + 273.15;                                      // celcius to kelvin = 1°C + 273.15
+                        fahrenheit = (celsius * 9d / 5d) + 32d;                  // Celsius (°C) times 9/5 plus 32:
+                        kelvin = celsius + 273.15;                               // celcius to kelvin = 1°C + 273.15
 
                         Console.WriteLine($"{celsius} °C = {fahrenheit:#.#} F");
                         Console.WriteLine($"{celsius} °C = {kelvin:#.#} K");
                         Console.ReadLine();
-
                         break;
 
                     case "2":
                         Console.WriteLine("You have chosen Fahrenheit!"); 
                         Console.WriteLine();
 
-                        Console.WriteLine("Type in your Fahrenheit degree");
-                        fahrenheitString = Console.ReadLine();
-                        Console.WriteLine();
+                        Console.WriteLine("Type in your Fahrenheit degree: ");
 
-                        while (!double.TryParse(fahrenheitString, out fahrenheit))            // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            fahrenheitString = Console.ReadLine();
-                        }
-                        celsius = (fahrenheit - 32d) * 5d / 9d;         // (1°F − 32) × 5/9 = -17,22°C
-                        kelvin = (fahrenheit - 32d) * 5 / 9 + 273.15;   // (1°F − 32) × 5/9 + 273.15 = 255,928K
+                        TryParseDouble();
+                        fahrenheit = userDouble;
+                     
+                        celsius = (fahrenheit - 32d) * 5d / 9d;                 // (1°F − 32) × 5/9 = -17,22°C
+                        kelvin = (fahrenheit - 32d) * 5 / 9 + 273.15;           // (1°F − 32) × 5/9 + 273.15 = 255,928K
 
                         Console.WriteLine($"{fahrenheit} F = {celsius.ToString("#.#")} °C ");
                         Console.WriteLine($"{fahrenheit} F = {kelvin.ToString("#.#")} K");
                         Console.ReadLine();
-
                         break;
 
                     case "3":
-                        Console.WriteLine("You have chosen to Kelvin!");
+                        Console.WriteLine("You have chosen Kelvin!");
                         Console.WriteLine();
-                        Console.WriteLine("Type in your Kelvin degree");
-                        kelvinString = Console.ReadLine();
-                        while (!double.TryParse(kelvinString, out kelvin))            // Error handling for input.
-                        {
-                            Console.WriteLine("Input is not valid, try again!");
-                            kelvinString = Console.ReadLine();
-                        }
+                        Console.WriteLine("Type in your Kelvin degree: ");
 
-                        celsius = kelvin - 273.15;                          // 1K − 273.15 = -272,1°C
-                        fahrenheit = (kelvin * 9d / 5d) - 459.67;           // (1K − 273.15) × 9/5 + 32 = -457,9°F
+                        TryParseDouble();
+                        kelvin = userDouble;
 
+                        celsius = kelvin - 273.15;                              // 1K − 273.15 = -272,1°C
+                        fahrenheit = (kelvin * 9d / 5d) - 459.67;               // (1K − 273.15) × 9/5 + 32 = -457,9°F
 
                         Console.WriteLine($"{kelvin} K = {celsius.ToString("#.#")} °C ");
                         Console.WriteLine($"{kelvin} K = {fahrenheit.ToString("#.#")} F ");
@@ -99,14 +86,26 @@ namespace Projekt
                         break;
 
                     case "4":
-                        loop = false;
+                        loop = false;       // Bryter den aktuella loopen och tar användaren tillbaka till huvudmenyn.
                         break;
                         
                     default:
                         break;
                 }
             } 
-            while (loop);
+        }
+        public double TryParseDouble()      // Felinmatnings hantering som egen metod för att slippa upprepa koden vid varje inmatnings tillfälle.
+        {
+            userString = Console.ReadLine();
+            Console.WriteLine();
+
+            while (!double.TryParse(userString, out userDouble))
+            {
+                Console.WriteLine("Input is not valid, try again!");
+                userString = Console.ReadLine();
+            }
+
+            return userDouble;
         }
     }
 }
