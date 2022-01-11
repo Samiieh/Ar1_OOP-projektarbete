@@ -11,7 +11,7 @@ namespace Projekt
         public void Meny()
         {
             Console.Clear();
-            Console.WriteLine("Welcome to Niklas, Daniel and Samiies Project!");
+            Console.WriteLine("Welcome to Niklas, Daniel and Sam's Project!");
             Console.WriteLine();
             Console.WriteLine("» Main Menu «");
             Console.WriteLine();
