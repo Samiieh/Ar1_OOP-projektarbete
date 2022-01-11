@@ -43,12 +43,12 @@ namespace Projekt
                         TryParseFloat();
                         distance = userFloat;
 
-                        Console.Write("Type the time in hours: ");
+                        Console.Write("Type the time in minutes: ");
 
                         TryParseFloat();
                         time = userFloat;
 
-                        speed = time * distance;
+                        speed = (time/60) * distance;
                         Console.WriteLine($"The speed is: {speed} Km/h");
                         Console.ReadLine();
                         break;
@@ -63,11 +63,11 @@ namespace Projekt
                         TryParseFloat();
                         speed = userFloat;
 
-                        Console.Write("Type the time in hours: ");
+                        Console.Write("Type the time in minutes: ");
                         TryParseFloat();
                         time = userFloat;
 
-                        distance = speed * time;
+                        distance = speed * (time/60);
                         Console.WriteLine($"The distance is: {distance} Km");
                         Console.ReadLine();
                         break;
