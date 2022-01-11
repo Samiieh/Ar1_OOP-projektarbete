@@ -48,7 +48,7 @@ namespace Projekt
                         TryParseFloat();
                         time = userFloat;
 
-                        speed = (time/60) * distance;
+                        speed = (time/60f) * distance;
                         Console.WriteLine($"The speed is: {speed} Km/h");
                         Console.ReadLine();
                         break;
@@ -67,7 +67,7 @@ namespace Projekt
                         TryParseFloat();
                         time = userFloat;
 
-                        distance = speed * (time/60);
+                        distance = speed * (time/60f);
                         Console.WriteLine($"The distance is: {distance} Km");
                         Console.ReadLine();
                         break;
